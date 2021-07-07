@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+:root{
+
+    /*primary colors*/
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --clr-cyan: hsl(167, 40%, 24%); /*graphic design text*/
+    --clr-blue: hsl(198, 62%, 26%); /*photography text*/
+    --mid-cyan: hsl(168, 34%, 41%); /*footer*/
+
+    /*Neutral colors*/
+    --desat-blue: hsl(212, 27%, 19%);
+    --gray-blue-01: hsl(213, 9%, 39%);
+    --gray-blue-02: hsl(232, 10%, 55%);
+    --gray-blue-03: hsl(210, 4%, 67%);
+}
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+
+.hero{
+    background-image: url('images/mobile/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 37.8rem;
+    position: relative;
+}
+
+.nav-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.4rem;
+}
+
+#hamburger{
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+.nav-links{
+    position: absolute;
+    width: 85vw;
+    top: 6rem;
+    margin-left: 1.5%;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.2rem;
+    visibility: hidden;
+}
+
+#contact{
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 30px;
+    margin-right: 20%;
+    margin-left: 20%;
+    background-color: #fff;
+}
+#contact:hover{
+    background-color: var(--yellow);
+}
+
+.show{
+    visibility: visible;
+}
+.nav-links::after{
+    content: "";
+    top: -1.5rem;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid #fff;
+    border-left: 50px solid transparent;
+    position: absolute;
+}
+.nav-links ul{
+    display: flex;
+    flex-direction: column;
+}
+.nav-links li{
+    list-style: none;
+    padding: 1.5rem;
+}
+.nav-links a{
+    text-decoration: none;
+    color: var(--gray-blue-01);
+}
+
+.hero-main{
+    margin-top: 4rem;
+    padding: 1.5rem;
+}
+.hero-main h1{
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+.showcase{
+    text-align: center;
+}
+.element5{
+    width: 100%;
+    background-image: url('images/mobile/image-transform.jpg');
+    background-color: var(--yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 22rem;
+}
+.element6{
+    width: 100%;
+    height: 22rem;
+    background-image: url('images/mobile/image-stand-out.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.element1, .element2{
+    padding: 2rem;
+    min-height: 25rem;
+    font-size: 1.2rem;
+    font-family: 'Barlow', sans-serif;
+    color: var(--gray-blue-02);
+    /*border: 1px solid var(--soft-red);*/
+}
+.element1 h2,.element2  h2{
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    color: var(--desat-blue);
+    margin-top: 2.5rem;
+}
+.element1 a,.element2 a{
+    text-decoration: none;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: var(--desat-blue);
+}
+.element1 a:hover{
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-decoration-thickness: .3rem;
+}
+.element2 a:hover{
+    text-decoration: underline;
+    text-decoration-color:hsl(7, 99%, 70%);
+    text-decoration-thickness: .3rem;
+}
+.element1 p,.element2 p{
+    margin-bottom: 2rem;
+}
+.element3, .element4{
+    width: 100%;
+    padding: 2rem;
+}
+.element3{
+    background-image: url('images/mobile/image-graphic-design.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--clr-cyan);
+}
+.element3 h3,.element4 h3{
+    margin-top: 25rem;
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+    font-family: 'fraunces', serif;
+}
+.element3 p, .element4 p{
+    font-size: 1.2rem;
+    font-family: "barlow", serif;
+}
+.element4{
+    background-image: url('images/mobile/image-photography.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--clr-blue);
+}
+
+.testimonials{
+    text-align: center;
+    padding: 2rem;
+}
+.testimonial-head{
+    font-size: .8rem;
+    font-family: 'fraunces', serif;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--gray-blue-03);
+}
+.testimonial-main img{
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    margin-bottom: 1.8rem;
+    margin-top: 1.8rem;
+}
+.testimonial-main p{
+    font-family: "barlow", sans-serif;
+    font-size: 1.2rem;
+    color: var(--gray-blue-02);
+    margin-bottom: 1.5rem;
+}
+.testimonial-main h4{
+    font-size: 1.5rem;
+    font-family: 'Fraunces',serif;
+    color: var(--desat-blue);
+    margin-bottom: .5rem;
+}
+.testimonial-main span{
+    font-family: 'barlow',serif;
+    font-size: 1rem;
+    color: var(--gray-blue-02);
+}
+.photography{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.photography .photos{
+    height: 13rem;
+    background-size: cover;
+    background-position: center;
+}
+.photography .photo1{
+    background-image: url('images/mobile/image-gallery-milkbottles.jpg');
+}
+.photography .photo2{
+    background-image: url('images/mobile/image-gallery-orange.jpg');
+}
+.photography .photo3{
+    background-image: url('images/mobile/image-gallery-cone.jpg');
+}
+.photography .photo4{
+    background-image: url('images/mobile/image-gallery-sugar-cubes.jpg');
+}
+footer{
+    text-align: center;
+    background-color: #90D4C5;
+    color: var(--mid-cyan);
+    padding: 2rem;
+}
+footer ul{
+    list-style: none;
+}
+.footer-nav ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+    gap: 2rem;
+}
+.footer-nav a{
+    text-decoration: none;    
+    font-family: 'barlow', sans-serif;
+    color: var(--mid-cyan);
+    font-size: 1.1rem; 
+}
+.footer-nav a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--mid-cyan);
+}
+.social-nav ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 700px) {
+    .nav-top{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-top #hamburger{
+        display: none;
+    }
+    .nav-links{
+        visibility: visible;
+        position: static;
+        background-color: unset;
+        width: unset;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+    }
+    .nav-links ul a{
+        color: #fff;
+    }
+    #contact{
+        margin: 0;
+    }
+    #contact a{
+        color: var(--desat-blue);
+    }
+    .nav-links::after{
+        display: none;
+    }
+    .hero{
+        background-image: url('images/desktop/image-header.jpg');
+        background-size: cover;
+        height: 100vh;
+    }
+    .hero h1{
+        font-size: 4rem;
+    }
+    .hero img{
+        margin-top: 4rem;
+    }
+    .showcase{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "a b"
+        "c d"
+        "e f" ;
+    }
+    .showcase .element5{
+        background-image: url('images/desktop/image-transform.jpg');
+    }
+    .showcase .element6{
+        background-image: url('images/desktop/image-stand-out.jpg');
+    }
+    .showcase .elements{
+        height: unset;
+    }
+    .showcase .element1{
+        grid-area: a;
+    }
+    .element1, .element2{
+        text-align: left;
+        padding: 10rem;
+    }
+    .element1 h2, .element2 h2{
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    .element3, .element4{
+        padding: 10rem;
+    }
+    .element3{
+        background-image: url('images/desktop/image-graphic-design.jpg');
+    }
+    .element4{
+        background-image: url('images/desktop/image-photography.jpg');
+    }
+    .testimonials{
+        height: 40rem;
+    }
+    .testimonial-main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 4%;
+        gap: 5rem;
+    }
+    .photography{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr;
+    }
+    .photography .photos{
+        height: 45rem;
+    }
+    .photography .photo1{
+        background-image: url('images/desktop/image-gallery-milkbottles.jpg');
+    }
+    .photography .photo2{
+        background-image: url('images/desktop/image-gallery-orange.jpg');
+    }
+    .photography .photo3{
+        background-image: url('images/desktop/image-gallery-cone.jpg');
+    }
+    .photography .photo4{
+        background-image: url('images/desktop/image-gallery-sugarcubes.jpg');
+    }
+    .attribution{
+        display: none;
+    }
+}    
